@@ -48,11 +48,11 @@ public class Movement : MonoBehaviour
         if (moving && Walkingsound.isPlaying ==false)
         {
             Walkingsound.Play();
-            Debug.Log("playing sound");
+            //Debug.Log("playing sound");
         }
         else if(moving ==false)
         {
-            Debug.Log("not playing sound");
+            //Debug.Log("not playing sound");
             Walkingsound.Pause();
         }
 
