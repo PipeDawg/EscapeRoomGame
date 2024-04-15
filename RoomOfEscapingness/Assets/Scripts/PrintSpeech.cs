@@ -10,20 +10,17 @@ public class PrintSpeech : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         interactable = GetComponent<InteractabbleBase>();
-        PrintSpeechPaper();
     }
     private void Update()
     {
-        /*
         if (interactable.triggerInteractAction)
         {
             PrintSpeechPaper();
         }
-        */
     }
 
     public void PrintSpeechPaper()
     {
-        animator.StartPlayback();
+        
     }
 }
