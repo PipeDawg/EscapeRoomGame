@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PickUpToInventory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private InteractabbleBase interactable;
+    private GameManager gameManager;
+    private void Awake()
     {
-        
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        interactable = GetComponent<InteractabbleBase>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (interactable.triggerInteractAction)
+        {
+            gameManager.hasSpeech = true;
+            Destroy(gameObject);
+        }
     }
 }

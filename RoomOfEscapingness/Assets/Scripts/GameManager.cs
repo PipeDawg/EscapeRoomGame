@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject LaptopCam;
     [SerializeField] GameObject MainCam;
+    public bool hasSpeech = false;
+    public bool hasJacket = false;
+    public bool hasShaved = false;
+    public bool hasMemory = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     public void SwitchCamera()
     {
-        if (MainCam.active == true)
+        if (MainCam.activeSelf == true)
         {
             LaptopCam.SetActive(true);
             MainCam.SetActive(false);
@@ -46,4 +50,6 @@ public class GameManager : MonoBehaviour
             Cursor.visible = true;
         }
     }
+
+
 }

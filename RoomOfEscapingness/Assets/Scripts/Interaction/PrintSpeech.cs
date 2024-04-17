@@ -5,10 +5,11 @@ using UnityEngine;
 public class PrintSpeech : MonoBehaviour
 {
     private InteractabbleBase interactable;
-    private Animator animator;
+    public Animator animator;
+    public GameObject speechPaperObject;
     private void Start()
     {
-        animator = GetComponentInChildren<Animator>();
+        //animator = GetComponentInChildren<Animator>();
         interactable = GetComponent<InteractabbleBase>();
     }
     private void Update()
@@ -21,6 +22,7 @@ public class PrintSpeech : MonoBehaviour
 
     public void PrintSpeechPaper()
     {
+        speechPaperObject.SetActive(true);
         Debug.Log("Works");
         animator.SetBool("StartAnimation", true);
     }

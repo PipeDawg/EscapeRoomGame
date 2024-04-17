@@ -18,7 +18,7 @@ public class InteractabbleBase : MonoBehaviour
     {
         triggerInteractAction = false;
         //Debug.Log("Didn't Interact With Object");
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (playerObject.GetComponent<InteractLookCheck>().LookingAt(gameObject))
             {
