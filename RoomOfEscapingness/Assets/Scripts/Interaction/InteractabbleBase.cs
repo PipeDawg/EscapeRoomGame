@@ -6,11 +6,11 @@ public class InteractabbleBase : MonoBehaviour
 {
     [HideInInspector] public GameObject playerObject;
     public bool triggerInteractAction;
-    public float interactionDistance = 5;
     // Start is called before the first frame update
     void Start()
     {
-        playerObject = GameObject.Find("Player");
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+
     }
 
     // Update is called once per frame
@@ -18,9 +18,7 @@ public class InteractabbleBase : MonoBehaviour
     {
         triggerInteractAction = false;
         //Debug.Log("Didn't Interact With Object");
-
-        float distanceBetweenPlayerAndObject = Vector3.Distance(gameObject.transform.position, playerObject.transform.position);
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
             if (playerObject.GetComponent<InteractLookCheck>().LookingAt(gameObject))
             {

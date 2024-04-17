@@ -7,14 +7,13 @@ public class TriggerDoorControl : MonoBehaviour
 
     public bool mirrorAnim;
     private Animator doorAnimator;
-    InteractLookCheck raycastScript;
+    [SerializeField] private InteractabbleBase raycastScript;
     public GameObject doorObject;
     AudioSource DoorOpenSound;
     AudioSource DoorCloseSound;
 
     private void Start()
     {
-
 
         GameObject OpenSound = GameObject.Find("DoorOpenAudio");
         DoorOpenSound = OpenSound.GetComponent<AudioSource>();
@@ -34,8 +33,7 @@ public class TriggerDoorControl : MonoBehaviour
     void Update()
     {
 
-
-        if (raycastScript.LookingAt(doorObject) && Input.GetKeyDown(KeyCode.E))
+        if (raycastScript.triggerInteractAction && Input.GetKeyDown(KeyCode.E))
         {
             ToggleDoorAnimation();
         }

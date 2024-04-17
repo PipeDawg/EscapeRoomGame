@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2510666969282947339}
   - component: {fileID: 2510666969282947336}
   - component: {fileID: 2510666969282947337}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: werr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7552781551710073777}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: GroundChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7552781552114090567}
   - component: {fileID: 7552781552114090564}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Walking sounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 7552781552354753135}
   - component: {fileID: 2510666968101867664}
   - component: {fileID: 622178668111435343}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dab60ea163e1784494e4fbc1a33dbc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sesitivy: 100
+  sesitivy: 1000
   playerBody: {fileID: 7552781552722146891}
 --- !u!1 &7552781552508457952
 GameObject:
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 7552781552508457956}
   - component: {fileID: 7552781552508457957}
   - component: {fileID: 7552781552508457954}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: vice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,9 +536,10 @@ GameObject:
   - component: {fileID: 7552781552722146890}
   - component: {fileID: 2223993744506028385}
   - component: {fileID: 344335177444234333}
-  m_Layer: 3
+  - component: {fileID: 8146240762594948840}
+  m_Layer: 6
   m_Name: PlayerThingy
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -551,7 +552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7552781552722146933}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.70327985, z: -0, w: -0.7109132}
+  m_LocalRotation: {x: -0, y: -0.7032766, z: 0, w: -0.7109164}
   m_LocalPosition: {x: 18.95, y: 1.737, z: 33.23}
   m_LocalScale: {x: 1, y: 1.348, z: 1}
   m_ConstrainProportionsScale: 0
@@ -696,4 +697,17 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  Walkingsound: {fileID: 0}
+  Walkingsound: {fileID: 7552781552114090564}
+--- !u!114 &8146240762594948840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7552781552722146933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aadfb52b49d22fa429b0caf3754592c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRange: 4
