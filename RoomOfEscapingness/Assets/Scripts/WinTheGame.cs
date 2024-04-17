@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WinTheGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Image fadeToWhiteImage;
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            fadeToWhiteImage.CrossFadeAlpha(255, 3, true);
+        }
     }
 }
