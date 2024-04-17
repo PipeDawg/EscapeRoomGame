@@ -464,8 +464,6 @@ GameObject:
   - component: {fileID: 489094938}
   - component: {fileID: 489094937}
   - component: {fileID: 489094941}
-  - component: {fileID: 489094943}
-  - component: {fileID: 489094944}
   m_Layer: 0
   m_Name: SpeechPaper
   m_TagString: Untagged
@@ -489,7 +487,7 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
@@ -553,11 +551,11 @@ Transform:
   m_GameObject: {fileID: 489094936}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.002, y: -0.1628001, z: 0.049}
-  m_LocalScale: {x: 0.52008843, y: 0.016257942, z: 0.7545423}
+  m_LocalPosition: {x: 0.002, y: -0.197, z: 0.049}
+  m_LocalScale: {x: 0.52008843, y: 0.039538685, z: 0.7545423}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1063192976}
+  m_Father: {fileID: 1926972809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &489094941
 Animator:
@@ -580,33 +578,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &489094943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489094936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf3ea8153623c0246b2d3d48e97a274d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerObject: {fileID: 0}
-  triggerInteractAction: 0
-  interactionDistance: 5
---- !u!114 &489094944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489094936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97f0b002375b5734eb088b3869f9f164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &504485268
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,14 +919,13 @@ Transform:
   m_GameObject: {fileID: 1063192975}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.588, z: 0}
+  m_LocalPosition: {x: 0, y: 1.228, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1926972809}
   - {fileID: 111691654}
   - {fileID: 37660858}
-  - {fileID: 489094940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1126994933
@@ -1088,7 +1058,7 @@ Transform:
   m_GameObject: {fileID: 1479523065}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1321,6 +1291,8 @@ GameObject:
   - component: {fileID: 1926972808}
   - component: {fileID: 1926972807}
   - component: {fileID: 1926972806}
+  - component: {fileID: 1926972811}
+  - component: {fileID: 1926972810}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1411,9 +1383,37 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.058900118, z: 0}
   m_LocalScale: {x: 1, y: 0.41119075, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 489094940}
   m_Father: {fileID: 1063192976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1926972810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926972805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f0b002375b5734eb088b3869f9f164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1926972811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926972805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3ea8153623c0246b2d3d48e97a274d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
+  triggerInteractAction: 0
+  interactionDistance: 5
 --- !u!114 &25967175330089071
 MonoBehaviour:
   m_ObjectHideFlags: 0

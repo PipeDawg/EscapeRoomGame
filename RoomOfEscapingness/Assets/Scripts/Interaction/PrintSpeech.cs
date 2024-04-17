@@ -8,7 +8,7 @@ public class PrintSpeech : MonoBehaviour
     private Animator animator;
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         interactable = GetComponent<InteractabbleBase>();
     }
     private void Update()
@@ -21,6 +21,7 @@ public class PrintSpeech : MonoBehaviour
 
     public void PrintSpeechPaper()
     {
+        Debug.Log("Works");
         animator.SetBool("StartAnimation", true);
     }
 }
