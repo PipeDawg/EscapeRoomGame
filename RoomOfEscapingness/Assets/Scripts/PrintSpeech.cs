@@ -21,6 +21,6 @@ public class PrintSpeech : MonoBehaviour
 
     public void PrintSpeechPaper()
     {
-        
+        animator.SetBool("StartAnimation", true);
     }
 }
