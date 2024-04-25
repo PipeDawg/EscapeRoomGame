@@ -63,10 +63,13 @@ public class GrabableObject : MonoBehaviour
                 gameObject.GetComponent<Movement>().enabled = false;
             }
         }
-        else if(!inspectState && !gameObject.GetComponentInChildren<MouseLook>().isActiveAndEnabled)
+        else if(!inspectState && gameObject.GetComponentInChildren<MouseLook>() != null)
         {
-            gameObject.GetComponent<Movement>().enabled = true;
-            gameObject.GetComponentInChildren<MouseLook>().enabled = true;
+            if (!gameObject.GetComponentInChildren<MouseLook>().isActiveAndEnabled)
+            {
+                gameObject.GetComponent<Movement>().enabled = true;
+                gameObject.GetComponentInChildren<MouseLook>().enabled = true;
+            }
         }
     }
 
