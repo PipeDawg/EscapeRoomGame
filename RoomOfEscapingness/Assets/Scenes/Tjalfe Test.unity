@@ -377,6 +377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaptopCam: {fileID: 748079127}
   MainCam: {fileID: 8780055450568945448}
+  UI: {fileID: 0}
   hasSpeech: 0
   hasJacket: 0
   hasShaved: 0
@@ -925,6 +926,78 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &3930206235735022373
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6187684162332763398, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      propertyPath: m_Name
+      value: Clue for SpeechPuzzle 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908830107291564874, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.823687
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908830107291564874, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2262652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908830107291564874, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4960617
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908830107291564874, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908830107291564874, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908830107291564874, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908830107291564874, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908830107291564874, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908830107291564874, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908830107291564874, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8514013344756106387, guid: bc36cde871fff2a4b9a2f92f2221447e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: bc36cde871fff2a4b9a2f92f2221447e, type: 3}
 --- !u!33 &4155225607472232866
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1037,6 +1110,78 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &4947293416507030080
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4859709006375881912, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      propertyPath: m_Name
+      value: Clue for SpeechPuzzle 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668030817662186449, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.8864355
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668030817662186449, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0018989
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668030817662186449, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.6248096
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668030817662186449, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668030817662186449, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668030817662186449, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668030817662186449, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668030817662186449, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668030817662186449, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668030817662186449, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1883461525364610641, guid: 8fe025edac2028e4c84ee1594dfe590f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: 8fe025edac2028e4c84ee1594dfe590f, type: 3}
 --- !u!33 &5162338890990047476
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1225,6 +1370,78 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &8851768449510369224
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2670910593549545802, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      propertyPath: m_Name
+      value: Clue for SpeechPuzzle 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434970626148488302, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434970626148488302, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434970626148488302, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434970626148488302, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434970626148488302, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434970626148488302, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434970626148488302, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434970626148488302, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434970626148488302, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434970626148488302, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6423153711131559495, guid: 729b3ca7bf2709148893f4c7b99f8d31,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: 729b3ca7bf2709148893f4c7b99f8d31, type: 3}
 --- !u!1001 &8956131047605994221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1392,3 +1609,6 @@ SceneRoots:
   - {fileID: 716420533}
   - {fileID: 748079131}
   - {fileID: 632871830}
+  - {fileID: 8851768449510369224}
+  - {fileID: 3930206235735022373}
+  - {fileID: 4947293416507030080}
