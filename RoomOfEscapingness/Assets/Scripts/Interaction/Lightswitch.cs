@@ -26,7 +26,7 @@ public class Lightswitch : MonoBehaviour
         if (interactabble.triggerInteractAction)
         {
             FlipthisState();
-            animator.SetBool("On",thisState);
+            animator.SetBool("On",  thisState);
         }
 
     }
