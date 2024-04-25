@@ -11,9 +11,17 @@ public class TriggerDoorControl : MonoBehaviour
     public GameObject doorObject;
     AudioSource DoorOpenSound;
     AudioSource DoorCloseSound;
+    [SerializeField] bool HasLock;
+    public bool Locked = true;
+
+    public GameObject Key;
 
     private void Start()
     {
+        if (HasLock)
+        {
+            Locked = true;
+        }
 
         GameObject OpenSound = GameObject.Find("DoorOpenAudio");
         DoorOpenSound = OpenSound.GetComponent<AudioSource>();
@@ -32,10 +40,12 @@ public class TriggerDoorControl : MonoBehaviour
 
     void Update()
     {
-
         if (raycastScript.triggerInteractAction && Input.GetKeyDown(KeyCode.E))
         {
-            ToggleDoorAnimation();
+            if (!Locked)
+            {
+                ToggleDoorAnimation();
+            }
         }
 
 

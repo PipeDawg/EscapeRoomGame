@@ -38,7 +38,7 @@ public class GrabableObject : MonoBehaviour
             UpdateGrabbedObjectPosition();
         }
 
-        if (inspectState)
+        if (inspectState && isGrabbed)
         {
             inspectMechanic();
         }
@@ -63,7 +63,7 @@ public class GrabableObject : MonoBehaviour
                 gameObject.GetComponent<Movement>().enabled = false;
             }
         }
-        else if(!inspectState && gameObject.GetComponentInChildren<MouseLook>() != null)
+        else if(!inspectState)
         {
             if (!gameObject.GetComponentInChildren<MouseLook>().isActiveAndEnabled)
             {
@@ -102,6 +102,7 @@ public class GrabableObject : MonoBehaviour
         grabbedObject = null;
         grabbedRigidbody = null;
         isGrabbed = false;
+        inspectState = false;
     }
 
     void UpdateGrabbedObjectPosition()
