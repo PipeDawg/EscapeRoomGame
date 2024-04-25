@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject LaptopCam;
     [SerializeField] GameObject MainCam;
+    [SerializeField] GameObject UI;
     public bool hasSpeech = false;
     public bool hasJacket = false;
     public bool hasShaved = false;
@@ -49,6 +50,11 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+    }
+
+    public void UIOn(bool type)
+    {
+        UI.SetActive(type);
     }
 
 

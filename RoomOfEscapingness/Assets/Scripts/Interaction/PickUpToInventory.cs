@@ -15,6 +15,7 @@ public class PickUpToInventory : MonoBehaviour
     {
         if (interactable.triggerInteractAction)
         {
+            Debug.Log("TAKING SPEECH");
             gameManager.hasSpeech = true;
             Destroy(gameObject);
         }
