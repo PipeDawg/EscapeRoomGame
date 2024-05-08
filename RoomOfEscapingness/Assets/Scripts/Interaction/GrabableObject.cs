@@ -5,7 +5,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class GrabableObject : MonoBehaviour
 {
-    private bool isGrabbed = false;
+    public bool isGrabbed = false;
     private Transform grabbedObject;
     private Rigidbody grabbedRigidbody;
     private float grabDistance = 2f; // Adjust the distance from the camera to the grabbed object
