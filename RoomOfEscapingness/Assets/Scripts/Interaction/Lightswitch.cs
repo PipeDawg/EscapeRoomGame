@@ -41,16 +41,12 @@ public class Lightswitch : MonoBehaviour
     {
         foreach (GameObject lightObject in lights)
         {
-            // Check if the GameObject has a Light component
-            Light lightComponent = lightObject.GetComponent<Light>();
-
             if (/*lightComponent != null && */thisState == false)
             {
-                // Decrease the intensity (adjust the factor as needed)
-                lightComponent.intensity = 0f; // You can use a different factor or value
+                lightObject.SetActive(false);
             } else
             {
-                lightComponent.intensity = 1f;
+                lightObject.SetActive(true);
             }
         }
     }
