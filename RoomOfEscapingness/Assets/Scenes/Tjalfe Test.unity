@@ -134,8 +134,9 @@ GameObject:
   - component: {fileID: 279427393}
   - component: {fileID: 279427395}
   - component: {fileID: 279427394}
+  - component: {fileID: 279427396}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Cursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,6 +199,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279427392}
   m_CullTransparentMesh: 1
+--- !u!114 &279427396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279427392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9a499d557ece240956faa6cabf0483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorList:
+  - {fileID: 21300000, guid: 33c0e1563eaea084a82fb757a3c9b7bf, type: 3}
+  - {fileID: 21300000, guid: 7fb204e5ac16be64da51d0aa95050371, type: 3}
+  - {fileID: 21300000, guid: 857f22392c396c743a23babc0471089d, type: 3}
+  interactLookCheck: {fileID: 0}
 --- !u!1 &460345050
 GameObject:
   m_ObjectHideFlags: 0
@@ -5860,6 +5878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5262595a3e37f334888d3ca18612f819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrabbed: 0
   sensitivity: 2
 --- !u!1 &7844063675767032948
 GameObject:

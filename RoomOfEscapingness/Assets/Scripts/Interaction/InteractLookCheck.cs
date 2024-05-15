@@ -22,8 +22,11 @@ public class InteractLookCheck : MonoBehaviour
         if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, interactionRange))
         {
             // Check if the hit object is the same as the target
-            Debug.Log(hit.collider.gameObject);
             hitObject = hit.collider.gameObject;
+            if (hit.collider == null)
+            {
+                hitObject = null;
+            }
             return hit.collider.gameObject == target;
         }
 
