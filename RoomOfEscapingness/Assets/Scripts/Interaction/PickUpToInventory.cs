@@ -20,7 +20,7 @@ public class PickUpToInventory : MonoBehaviour
                 gameManager.hasSpeech = true;
                 Debug.Log("TAKING SPEECH");
                 Destroy(gameObject);
-            } else
+            } else if(gameObject.name == "Jacket")
             {
                 gameManager.hasJacket = true;
                 Debug.Log("TAKING JACKET");

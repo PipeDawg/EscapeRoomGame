@@ -14,7 +14,7 @@ public class StopPlayerLeaving : MonoBehaviour
     }
     void Update()
     {
-        if (manager.hasSpeech)
+        if (manager.hasSpeech && manager.hasJacket)
         {
             stopper.enabled = false;
         }
@@ -25,7 +25,7 @@ public class StopPlayerLeaving : MonoBehaviour
         {
             return;
         }
-        if(!manager.hasSpeech)
+        if(!manager.hasSpeech || !manager.hasJacket)
         {
             objectiveText.SetActive(true);
         }
