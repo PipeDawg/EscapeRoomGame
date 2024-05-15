@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class PrintSpeech : MonoBehaviour
 {
@@ -12,18 +13,16 @@ public class PrintSpeech : MonoBehaviour
         //animator = GetComponentInChildren<Animator>();
         interactable = GetComponent<InteractabbleBase>();
     }
-    private void Update()
-    {
-        if (interactable.triggerInteractAction)
-        {
-            PrintSpeechPaper();
-        }
-    }
-
     public void PrintSpeechPaper()
     {
-        speechPaperObject.SetActive(true);
-        Debug.Log("Works");
-        animator.SetBool("StartAnimation", true);
+        if(speechPaperObject != null)
+        {
+            speechPaperObject.SetActive(true);
+            Debug.Log("Works");
+            animator.SetBool("StartAnimation", true);
+        } else
+        {
+            Debug.Log("NO MORE PAPER :(");
+        }
     }
 }

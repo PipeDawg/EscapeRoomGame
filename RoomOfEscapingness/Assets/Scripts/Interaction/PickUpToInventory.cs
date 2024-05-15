@@ -15,8 +15,17 @@ public class PickUpToInventory : MonoBehaviour
     {
         if (interactable.triggerInteractAction)
         {
-            gameManager.hasSpeech = true;
-            Destroy(gameObject);
+            if (gameObject.name == "SpeechPaper")
+            {
+                gameManager.hasSpeech = true;
+                Debug.Log("TAKING SPEECH");
+                Destroy(gameObject);
+            } else
+            {
+                gameManager.hasJacket = true;
+                Debug.Log("TAKING JACKET");
+                Destroy(gameObject);
+            }
         }
     }
 }

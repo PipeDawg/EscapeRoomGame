@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractLookCheck : MonoBehaviour
 {
+    public GameObject hitObject;
     public float interactionRange;
     // Start is called before the first frame update
     public bool LookingAt(GameObject target)
@@ -21,6 +22,8 @@ public class InteractLookCheck : MonoBehaviour
         if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, interactionRange))
         {
             // Check if the hit object is the same as the target
+            Debug.Log(hit.collider.gameObject);
+            hitObject = hit.collider.gameObject;
             return hit.collider.gameObject == target;
         }
 

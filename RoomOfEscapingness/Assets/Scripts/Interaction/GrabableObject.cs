@@ -1,19 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class GrabableObject : MonoBehaviour
 {
-    private bool isGrabbed = false;
+    public bool isGrabbed = false;
     private Transform grabbedObject;
     private Rigidbody grabbedRigidbody;
     private float grabDistance = 2f; // Adjust the distance from the camera to the grabbed object
     private LayerMask obstacleLayer; // Layer mask for obstacles (e.g., walls)
+    private bool inspectState;
+
+    private float rotationX = 0.0f;
+    private float rotationY = 0.0f;
+
+    public float sensitivity = 2.0f;
 
     // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Change to the desired input method (e.g., Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E)) // Change to the desired input method (e.g., Input.GetKeyDown(KeyCode.Space))
         {
             if (!isGrabbed)
             {
@@ -28,6 +36,40 @@ public class GrabableObject : MonoBehaviour
         if (isGrabbed)
         {
             UpdateGrabbedObjectPosition();
+        }
+
+        if (inspectState && isGrabbed)
+        {
+            inspectMechanic();
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (inspectState)
+            {
+                inspectState = false;
+
+            }
+            else if (grabbedObject != null)
+            {
+                inspectState = true;
+            }
+        }
+        if (inspectState)
+        {
+            if (gameObject.GetComponentInChildren<MouseLook>().isActiveAndEnabled)
+            {
+                gameObject.GetComponentInChildren<MouseLook>().enabled = false;
+                gameObject.GetComponent<Movement>().enabled = false;
+            }
+        }
+        else if(!inspectState)
+        {
+            if (!gameObject.GetComponentInChildren<MouseLook>().isActiveAndEnabled)
+            {
+                gameObject.GetComponent<Movement>().enabled = true;
+                gameObject.GetComponentInChildren<MouseLook>().enabled = true;
+            }
         }
     }
 
@@ -60,6 +102,7 @@ public class GrabableObject : MonoBehaviour
         grabbedObject = null;
         grabbedRigidbody = null;
         isGrabbed = false;
+        inspectState = false;
     }
 
     void UpdateGrabbedObjectPosition()
@@ -79,6 +122,19 @@ public class GrabableObject : MonoBehaviour
             Vector3 targetPosition = Camera.main.transform.position + Camera.main.transform.forward * grabDistance;
             grabbedObject.position = Vector3.Lerp(grabbedObject.position, targetPosition, Time.deltaTime * 10f);
         }
+    }
+
+    void inspectMechanic()
+    {
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
+
+        rotationX += mouseY * sensitivity;
+        rotationY += mouseX * sensitivity;
+
+        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+
+        grabbedObject.rotation = Quaternion.Euler(-rotationX, rotationY, 0.0f);
     }
 }
 
