@@ -15,6 +15,7 @@ public class PickUpToInventory : MonoBehaviour
     {
         if (interactable.triggerInteractAction)
         {
+            Debug.Log(gameObject.name);
             if (gameObject.name == "SpeechPaper")
             {
                 gameManager.hasSpeech = true;
@@ -24,6 +25,11 @@ public class PickUpToInventory : MonoBehaviour
             {
                 gameManager.hasJacket = true;
                 Debug.Log("TAKING JACKET");
+                Destroy(gameObject);
+            }
+            else if(gameObject.name == "LidToRemove")
+            {
+                gameManager.foundAlarmKey = true;
                 Destroy(gameObject);
             }
         }

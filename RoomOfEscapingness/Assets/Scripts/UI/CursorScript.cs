@@ -31,7 +31,7 @@ public class CursorScript : MonoBehaviour
             cursorState = 0;
             imageTransform.sizeDelta = new Vector2(8, 8);
         }
-        else if(interactLookCheck.hitObject.tag == "Grabbable" && !grabberScript.isGrabbed)
+        else if(interactLookCheck.hitObject.tag == "Grabbable" && !grabberScript.isGrabbed || interactLookCheck.hitObject.name == "LidToRemove" || interactLookCheck.hitObject.name == "Laptop")
         {
             cursorState = 1;
             imageTransform.sizeDelta = new Vector2(25, 25);
