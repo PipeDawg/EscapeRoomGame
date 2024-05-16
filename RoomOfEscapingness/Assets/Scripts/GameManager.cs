@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public bool hasJacket = false;
     public bool hasShaved = false;
     public bool hasMemory = false;
+    public bool foundAlarmKey = false;
 
     // Start is called before the first frame update
     void Start()
