@@ -2,20 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class NoteReader : MonoBehaviour
 {
-    public GameObject myNoteCanvas;
+    public TMP_Text clueText;
+    [SerializeField] List<GameObject> clueNotes;
+    public InteractLookCheck lookScript;
+
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        clueText.text = "";
+
+        for (int i = 0; i < clueNotes.Count; i++)
         {
-            myNoteCanvas.SetActive(true);
-        }
-        else
-        {
-            myNoteCanvas.SetActive(false);
+            
+            if (lookScript.LookingAt(clueNotes[i]))
+            {
+
+                clueText.text = clueNotes[i].GetComponentInChildren<TextMeshPro>().text;
+
+            }
         }
     }
 
