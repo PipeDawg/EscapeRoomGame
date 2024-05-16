@@ -5636,10 +5636,12 @@ MonoBehaviour:
   LaptopCam: {fileID: 2055968594}
   MainCam: {fileID: 6101098646778824141}
   UI: {fileID: 1612089688}
+  PlayerMovement: {fileID: 3400240012303067400}
   hasSpeech: 0
   hasJacket: 0
   hasShaved: 0
   hasMemory: 0
+  foundAlarmKey: 0
 --- !u!4 &1224035719
 Transform:
   m_ObjectHideFlags: 0
