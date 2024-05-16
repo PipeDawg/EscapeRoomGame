@@ -19,14 +19,15 @@ public class InteractLookCheck : MonoBehaviour
         }
 
         RaycastHit hit;
-        if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, interactionRange))
+        Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, interactionRange);
+        if (hit.collider == null)
+        {
+            hitObject = null;
+        }
+        else
         {
             // Check if the hit object is the same as the target
             hitObject = hit.collider.gameObject;
-            if (hit.collider == null)
-            {
-                hitObject = null;
-            }
             return hit.collider.gameObject == target;
         }
 

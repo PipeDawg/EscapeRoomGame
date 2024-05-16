@@ -29,10 +29,9 @@ public class CursorScript : MonoBehaviour
         if(interactLookCheck.hitObject == null)
         {
             cursorState = 0;
+            imageTransform.sizeDelta = new Vector2(8, 8);
         }
-        Debug.Log("Is Object Grabbed: " + grabberScript.isGrabbed);
-        
-        if(interactLookCheck.hitObject.tag == "Grabbable" && !grabberScript.isGrabbed)
+        else if(interactLookCheck.hitObject.tag == "Grabbable" && !grabberScript.isGrabbed)
         {
             cursorState = 1;
             imageTransform.sizeDelta = new Vector2(25, 25);
@@ -48,6 +47,5 @@ public class CursorScript : MonoBehaviour
             imageTransform.sizeDelta = new Vector2(8,8);
         }
         cursorImage.sprite = cursorList[cursorState];
-        Debug.Log("Cursor at the end: " + cursorState);
     }
 }
