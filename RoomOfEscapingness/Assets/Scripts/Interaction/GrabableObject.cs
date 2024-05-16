@@ -43,16 +43,18 @@ public class GrabableObject : MonoBehaviour
             inspectMechanic();
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButton(0))
+        {
+            if (!inspectState)
+            {
+                inspectState = true;
+            }
+        } 
+        else
         {
             if (inspectState)
             {
                 inspectState = false;
-
-            }
-            else if (grabbedObject != null)
-            {
-                inspectState = true;
             }
         }
         if (inspectState)
