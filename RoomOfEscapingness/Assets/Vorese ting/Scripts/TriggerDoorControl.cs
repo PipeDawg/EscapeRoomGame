@@ -40,7 +40,7 @@ public class TriggerDoorControl : MonoBehaviour
 
     void Update()
     {
-        if (raycastScript.triggerInteractAction && Input.GetKeyDown(KeyCode.E))
+        if (raycastScript.triggerInteractAction)
         {
             if (!Locked)
             {

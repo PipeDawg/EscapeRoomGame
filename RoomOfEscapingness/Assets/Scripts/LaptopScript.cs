@@ -34,7 +34,7 @@ public class LaptopScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (InteractableScript.triggerInteractAction)
+        if (InteractableScript.triggerInteractAction && !Inputfield.isFocused)
         {
             if (_zoomedIn)
             {
