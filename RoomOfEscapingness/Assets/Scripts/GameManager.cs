@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject LaptopCam;
     [SerializeField] GameObject MainCam;
     [SerializeField] GameObject UI;
+    [SerializeField] Movement PlayerMovement;
     public bool hasSpeech = false;
     public bool hasJacket = false;
     public bool hasShaved = false;
@@ -30,11 +31,13 @@ public class GameManager : MonoBehaviour
         {
             LaptopCam.SetActive(true);
             MainCam.SetActive(false);
+            PlayerMovement.enabled = false;
         }
         else
         {
             MainCam.SetActive(true);
             LaptopCam.SetActive(false);
+            PlayerMovement.enabled = true;
         }
     }
 
