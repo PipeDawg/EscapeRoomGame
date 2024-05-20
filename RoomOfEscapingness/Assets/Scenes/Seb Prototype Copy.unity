@@ -30604,10 +30604,12 @@ MonoBehaviour:
   LaptopCam: {fileID: 2055968594}
   MainCam: {fileID: 6101098646778824141}
   UI: {fileID: 1612089688}
+  PlayerMovement: {fileID: 0}
   hasSpeech: 0
   hasJacket: 0
   hasShaved: 0
   hasMemory: 0
+  foundAlarmKey: 0
 --- !u!4 &1224035719
 Transform:
   m_ObjectHideFlags: 0
@@ -40095,8 +40097,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637056221}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: -29.2, y: 0, z: -10.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -40104,7 +40106,7 @@ Transform:
   - {fileID: 1981727814}
   - {fileID: 1937389431}
   m_Father: {fileID: 656548192}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1638690397
 GameObject:
   m_ObjectHideFlags: 0
@@ -40129,8 +40131,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638690397}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: -29.2, y: 0, z: -10.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -40142,7 +40144,7 @@ Transform:
   - {fileID: 1137507530}
   - {fileID: 1139815455}
   m_Father: {fileID: 656548192}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1643327275
 GameObject:
   m_ObjectHideFlags: 0
