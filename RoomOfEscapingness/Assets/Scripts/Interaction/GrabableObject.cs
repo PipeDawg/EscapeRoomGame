@@ -41,6 +41,19 @@ public class GrabableObject : MonoBehaviour
         if (inspectState && isGrabbed)
         {
             inspectMechanic();
+
+            if (gameObject.GetComponentInChildren<MouseLook>().isActiveAndEnabled)
+            {
+                gameObject.GetComponentInChildren<MouseLook>().enabled = false;
+                gameObject.GetComponent<Movement>().enabled = false;
+            }
+        } else if (!inspectState) 
+        {
+            if (!gameObject.GetComponentInChildren<MouseLook>().isActiveAndEnabled)
+            {
+                gameObject.GetComponent<Movement>().enabled = true;
+                gameObject.GetComponentInChildren<MouseLook>().enabled = true;
+            }
         }
 
         if (Input.GetMouseButton(0))
@@ -55,22 +68,6 @@ public class GrabableObject : MonoBehaviour
             if (inspectState)
             {
                 inspectState = false;
-            }
-        }
-        if (inspectState)
-        {
-            if (gameObject.GetComponentInChildren<MouseLook>().isActiveAndEnabled)
-            {
-                gameObject.GetComponentInChildren<MouseLook>().enabled = false;
-                gameObject.GetComponent<Movement>().enabled = false;
-            }
-        }
-        else if(!inspectState)
-        {
-            if (!gameObject.GetComponentInChildren<MouseLook>().isActiveAndEnabled)
-            {
-                gameObject.GetComponent<Movement>().enabled = true;
-                gameObject.GetComponentInChildren<MouseLook>().enabled = true;
             }
         }
     }
