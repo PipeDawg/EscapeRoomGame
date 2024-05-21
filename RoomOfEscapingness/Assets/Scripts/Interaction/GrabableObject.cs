@@ -5,10 +5,12 @@ using static UnityEngine.GraphicsBuffer;
 
 public class GrabableObject : MonoBehaviour
 {
+    [SerializeField] MoveCam mouseLook;
+
     public bool isGrabbed = false;
     private Transform grabbedObject;
     private Rigidbody grabbedRigidbody;
-    private float grabDistance = 2f; // Adjust the distance from the camera to the grabbed object
+    private float grabDistance = 1f; // Adjust the distance from the camera to the grabbed object
     private LayerMask obstacleLayer; // Layer mask for obstacles (e.g., walls)
     private bool inspectState;
 
@@ -42,17 +44,17 @@ public class GrabableObject : MonoBehaviour
         {
             inspectMechanic();
 
-            if (gameObject.GetComponentInChildren<MouseLook>().isActiveAndEnabled)
+            if (mouseLook.isActiveAndEnabled)
             {
-                gameObject.GetComponentInChildren<MouseLook>().enabled = false;
-                gameObject.GetComponent<Movement>().enabled = false;
+                mouseLook.enabled = false;
+                gameObject.GetComponent<PlayerMovement>().enabled = false;
             }
         } else if (!inspectState) 
         {
-            if (!gameObject.GetComponentInChildren<MouseLook>().isActiveAndEnabled)
+            if (!mouseLook.isActiveAndEnabled)
             {
-                gameObject.GetComponent<Movement>().enabled = true;
-                gameObject.GetComponentInChildren<MouseLook>().enabled = true;
+                gameObject.GetComponent<PlayerMovement>().enabled = true;
+                mouseLook.enabled = true;
             }
         }
 
