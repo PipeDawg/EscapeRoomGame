@@ -8,21 +8,61 @@ public class NoteReader : MonoBehaviour
     public TMP_Text clueText;
     [SerializeField] List<GameObject> clueNotes;
     public InteractLookCheck lookScript;
+    public GameObject textBackground;
 
 
     void Update()
     {
         clueText.text = "";
 
-        for (int i = 0; i < clueNotes.Count; i++)
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, lookScript.interactionRange))
         {
-            
-            if (lookScript.LookingAt(clueNotes[i]))
+            Clue clue = hit.collider.GetComponent<Clue>();
+            if (clue != null)
+            {
+                if (clue.textPopup == true)
+                {
+                    if (clue.isFacingCamera)
+                    {
+                        clueText.text = clue.textFront.text;
+                        if (clue.copyTextSize == true)
+                        {
+                            clueText.fontSize = clue.textFront.fontSize;
+                        }
+                    }
+                    else
+                    {
+                        clueText.text = clue.textBack.text;
+                        if (clue.copyTextSize == true)
+                        {
+                            clueText.fontSize = clue.textBack.fontSize;
+                        }
+                    }
+                }
+            }
+        }
+
+
+            /*
+            for (int i = 0; i < clueNotes.Count; i++)
             {
 
-                clueText.text = clueNotes[i].GetComponentInChildren<TextMeshPro>().text;
+                if (lookScript.LookingAt(clueNotes[i]))
+                {
 
+                    clueText.text = clueNotes[i].GetComponentInChildren<TextMeshPro>().text;
+                    clueText.fontSize = clueNotes[i].GetComponentInChildren<TextMeshPro>().fontSize;
+
+                }
             }
+            */
+
+            textBackground.SetActive(false);
+
+        if (clueText.text != "")
+        {
+            textBackground.SetActive(true);
         }
     }
 
