@@ -6,6 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 public class GrabableObject : MonoBehaviour
 {
     [SerializeField] MoveCam mouseLook;
+    private InteractLookCheck lookcheck;
 
     public bool isGrabbed = false;
     public Transform grabbedObject;
@@ -24,6 +25,7 @@ public class GrabableObject : MonoBehaviour
     private void Start()
     {
         mouseLook = GameObject.FindWithTag("MainCamera").GetComponent<MoveCam>();
+        lookcheck = GameObject.FindGameObjectWithTag("Player").GetComponent<InteractLookCheck>();
     }
 
     void Update()
@@ -84,12 +86,9 @@ public class GrabableObject : MonoBehaviour
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit,6))
+        if (lookcheck.hitObject.CompareTag("Grabbable"))
         {
-            if (hit.collider.CompareTag("Grabbable"))
-            {
-                GrabObject(hit.transform);
-            }
+            GrabObject(lookcheck.hitObject.transform);
         }
     }
 

@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitObject: {fileID: 0}
-  interactionRange: 6
+  interactionRange: 1
 --- !u!114 &7734348377047032507
 MonoBehaviour:
   m_ObjectHideFlags: 0
