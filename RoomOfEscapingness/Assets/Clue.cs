@@ -8,18 +8,17 @@ public class Clue : MonoBehaviour
     [Header("Text Options:")]
     [SerializeField] public bool copyTextSize = false;
     public bool textPopup = false;
-    
+
     [Header("Other:")]
     public TextMeshPro textFront;
     public TextMeshPro textBack;
-    private GameObject playerObject;
+    [SerializeField] GameObject playerObject;
     private GrabableObject gr;
     [HideInInspector] public bool isFacingCamera = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerObject = GameObject.FindGameObjectWithTag("Player");
         gr = playerObject.GetComponent<GrabableObject>();
     }
 

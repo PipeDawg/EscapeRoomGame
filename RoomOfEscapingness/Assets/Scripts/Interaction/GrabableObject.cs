@@ -8,7 +8,7 @@ public class GrabableObject : MonoBehaviour
     [SerializeField] MoveCam mouseLook;
 
     public bool isGrabbed = false;
-    private Transform grabbedObject;
+    public Transform grabbedObject;
     private Rigidbody grabbedRigidbody;
     private float grabDistance = 1f; // Adjust the distance from the camera to the grabbed object
     private LayerMask obstacleLayer; // Layer mask for obstacles (e.g., walls)
@@ -20,6 +20,11 @@ public class GrabableObject : MonoBehaviour
     public float sensitivity = 2.0f;
 
     // Update is called once per frame
+
+    private void Start()
+    {
+        mouseLook = GameObject.FindWithTag("MainCamera").GetComponent<MoveCam>();
+    }
 
     void Update()
     {
