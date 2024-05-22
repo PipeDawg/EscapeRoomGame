@@ -6,7 +6,7 @@ public class SmokeDetector : MonoBehaviour
 {
     private AudioSource beepAudio;
     private GameObject beepLight;
-    public float timeBetweenBeeps;
+    //public float timeBetweenBeeps; Doesn't work for some weird reason, just hard-coding it instead i guess.
     private GameManager gameManager;
     private float timer = 0;
     private void Start()
@@ -23,11 +23,11 @@ public class SmokeDetector : MonoBehaviour
         {
             beepLight.SetActive(false);
         }
-        if (timer > timeBetweenBeeps && !gameManager.foundAlarmKey)
+        if (timer > /*timeBetweenBeeps*/ 30 && !gameManager.foundAlarmKey)
         {
+            Debug.Log("Timer trigger at " + timer);
             timer = 0;
             // Beep code
-            Debug.Log("Timer trigger");
             beepAudio.Play();
             beepLight.SetActive(true);
 

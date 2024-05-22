@@ -83,9 +83,6 @@ public class GrabableObject : MonoBehaviour
 
     void TryGrabObject()
     {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
         if (lookcheck.hitObject.CompareTag("Grabbable"))
         {
             GrabObject(lookcheck.hitObject.transform);
