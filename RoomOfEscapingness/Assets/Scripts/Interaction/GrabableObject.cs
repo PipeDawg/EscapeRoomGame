@@ -10,7 +10,7 @@ public class GrabableObject : MonoBehaviour
     public bool isGrabbed = false;
     public Transform grabbedObject;
     private Rigidbody grabbedRigidbody;
-    private float grabDistance = 1f; // Adjust the distance from the camera to the grabbed object
+    [SerializeField] float grabDistance = 1f; // Adjust the distance from the camera to the grabbed object
     private LayerMask obstacleLayer; // Layer mask for obstacles (e.g., walls)
     private bool inspectState;
 
@@ -52,13 +52,13 @@ public class GrabableObject : MonoBehaviour
             if (mouseLook.isActiveAndEnabled)
             {
                 mouseLook.enabled = false;
-                gameObject.GetComponent<PlayerMovement>().enabled = false;
+                gameObject.GetComponent<PlayerMovementNew>().enabled = false;
             }
         } else if (!inspectState) 
         {
             if (!mouseLook.isActiveAndEnabled)
             {
-                gameObject.GetComponent<PlayerMovement>().enabled = true;
+                gameObject.GetComponent<PlayerMovementNew>().enabled = true;
                 mouseLook.enabled = true;
             }
         }
@@ -104,7 +104,7 @@ public class GrabableObject : MonoBehaviour
     void ReleaseObject()
     {
         grabbedRigidbody.isKinematic = false;
-        grabbedRigidbody.velocity = Camera.main.transform.forward * 10f; // Adjust the throw speed as needed
+        //grabbedRigidbody.velocity = Camera.main.transform.forward * 10f; // Adjust the throw speed as needed
         grabbedObject = null;
         grabbedRigidbody = null;
         isGrabbed = false;

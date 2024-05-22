@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject LaptopCam;
     [SerializeField] GameObject MainCam;
     [SerializeField] GameObject UI;
-    [SerializeField] PlayerMovement PlayerMovement;
+    [SerializeField] PlayerMovementNew PlayerMovement;
     public bool hasSpeech = false;
     public bool hasJacket = false;
     public bool hasShaved = false;
