@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 972273403245331436}
   - component: {fileID: 1988707153514006934}
   - component: {fileID: 7734348377047032507}
+  - component: {fileID: 4196273805894204754}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Player
@@ -309,6 +310,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPosition: {fileID: 6495277188644463538}
+--- !u!114 &4196273805894204754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4556957950794052289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a63b31df8f87184894187749f52c337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clueText: {fileID: 0}
+  grabobject: {fileID: 0}
+  lookScript: {fileID: 1988707153514006934}
+  textBackground: {fileID: 0}
 --- !u!1 &5432060754595736494
 GameObject:
   m_ObjectHideFlags: 0

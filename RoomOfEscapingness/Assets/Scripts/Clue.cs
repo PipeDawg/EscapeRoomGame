@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Clue : MonoBehaviour
 {
@@ -19,15 +20,29 @@ public class Clue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gr = playerObject.GetComponent<GrabableObject>();
+        if (playerObject != null)
+        {
+            gr = playerObject.GetComponent<GrabableObject>();
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (playerObject != null && gr.isGrabbed)
+        {
+            clue();
+        }
+
+
+    }
+
+    void clue()
+    {
         if (gr.grabbedObject == transform)
         {
-            float angle = Vector3.Angle(transform.forward, playerObject.transform.forward);
+            float angle = Vector3.Angle(transform.forward, Camera.main.transform.forward);
             isFacingCamera = angle > 90f;
         }
     }

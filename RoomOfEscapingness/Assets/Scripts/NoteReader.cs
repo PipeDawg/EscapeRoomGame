@@ -6,10 +6,14 @@ using TMPro;
 public class NoteReader : MonoBehaviour
 {
     public TMP_Text clueText;
-    [SerializeField] List<GameObject> clueNotes;
+    public GrabableObject grabobject;
     public InteractLookCheck lookScript;
     public GameObject textBackground;
 
+    private void Start()
+    {
+        grabobject = FindAnyObjectByType<GrabableObject>();
+    }
 
     void Update()
     {
@@ -18,29 +22,33 @@ public class NoteReader : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, lookScript.interactionRange))
         {
-            Clue clue = hit.collider.GetComponent<Clue>();
-            if (clue != null)
+            if (grabobject.grabbedObject == hit.transform)
             {
-                if (clue.textPopup == true)
+                Clue clue = hit.collider.GetComponent<Clue>();
+                if (clue != null)
                 {
-                    if (clue.isFacingCamera)
+                    if (clue.textPopup == true)
                     {
-                        clueText.text = clue.textFront.text;
-                        if (clue.copyTextSize == true)
+                        if (clue.isFacingCamera)
                         {
-                            clueText.fontSize = clue.textFront.fontSize;
+                            clueText.text = clue.textFront.text;
+                            if (clue.copyTextSize == true)
+                            {
+                                clueText.fontSize = clue.textFront.fontSize;
+                            }
                         }
-                    }
-                    else
-                    {
-                        clueText.text = clue.textBack.text;
-                        if (clue.copyTextSize == true)
+                        else
                         {
-                            clueText.fontSize = clue.textBack.fontSize;
+                            clueText.text = clue.textBack.text;
+                            if (clue.copyTextSize == true)
+                            {
+                                clueText.fontSize = clue.textBack.fontSize;
+                            }
                         }
                     }
                 }
             }
+            
         }
 
 

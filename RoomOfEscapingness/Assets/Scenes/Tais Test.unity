@@ -489,6 +489,7 @@ MonoBehaviour:
   textPopup: 1
   textFront: {fileID: 623273311}
   textBack: {fileID: 1137435390}
+  playerObject: {fileID: 2637196210233386614}
   isFacingCamera: 1
 --- !u!23 &254746517
 MeshRenderer:
@@ -1851,6 +1852,7 @@ GameObject:
   - component: {fileID: 961461471}
   - component: {fileID: 961461470}
   - component: {fileID: 961461476}
+  - component: {fileID: 961461477}
   m_Layer: 0
   m_Name: PuzzleNote2
   m_TagString: Grabbable
@@ -1922,6 +1924,7 @@ MonoBehaviour:
   textPopup: 1
   textFront: {fileID: 1207517212}
   textBack: {fileID: 154006751}
+  playerObject: {fileID: 2637196210233386614}
   isFacingCamera: 1
 --- !u!23 &961461473
 MeshRenderer:
@@ -2004,6 +2007,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
   triggerInteractAction: 0
+--- !u!114 &961461477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961461469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5262595a3e37f334888d3ca18612f819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseLook: {fileID: 0}
+  isGrabbed: 0
+  grabbedObject: {fileID: 0}
+  sensitivity: 2
 --- !u!1 &970965061
 GameObject:
   m_ObjectHideFlags: 0
@@ -3608,6 +3627,7 @@ GameObject:
   - component: {fileID: 1652441179}
   - component: {fileID: 1652441178}
   - component: {fileID: 1652441184}
+  - component: {fileID: 1652441185}
   m_Layer: 0
   m_Name: PuzzleNote4
   m_TagString: Grabbable
@@ -3679,6 +3699,7 @@ MonoBehaviour:
   textPopup: 1
   textFront: {fileID: 2022761970}
   textBack: {fileID: 713087580}
+  playerObject: {fileID: 2637196210233386614}
   isFacingCamera: 1
 --- !u!23 &1652441181
 MeshRenderer:
@@ -3761,6 +3782,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
   triggerInteractAction: 0
+--- !u!114 &1652441185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652441177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5262595a3e37f334888d3ca18612f819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseLook: {fileID: 0}
+  isGrabbed: 0
+  grabbedObject: {fileID: 0}
+  sensitivity: 2
 --- !u!1 &1820726536
 GameObject:
   m_ObjectHideFlags: 0
@@ -4099,6 +4136,7 @@ GameObject:
   - component: {fileID: 1971842300}
   - component: {fileID: 1971842299}
   - component: {fileID: 1971842305}
+  - component: {fileID: 1971842306}
   m_Layer: 0
   m_Name: PuzzleNote5
   m_TagString: Grabbable
@@ -4170,6 +4208,7 @@ MonoBehaviour:
   textPopup: 1
   textFront: {fileID: 2078636494}
   textBack: {fileID: 461564623}
+  playerObject: {fileID: 2637196210233386614}
   isFacingCamera: 1
 --- !u!23 &1971842302
 MeshRenderer:
@@ -4252,6 +4291,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
   triggerInteractAction: 0
+--- !u!114 &1971842306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971842298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5262595a3e37f334888d3ca18612f819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseLook: {fileID: 0}
+  isGrabbed: 0
+  grabbedObject: {fileID: 0}
+  sensitivity: 2
 --- !u!1 &2022761969
 GameObject:
   m_ObjectHideFlags: 0
@@ -8188,6 +8243,7 @@ MonoBehaviour:
   textPopup: 1
   textFront: {fileID: 1334599607}
   textBack: {fileID: 310645575}
+  playerObject: {fileID: 2637196210233386614}
   isFacingCamera: 1
 --- !u!65 &5643518280797293186
 BoxCollider:
@@ -8699,6 +8755,7 @@ MonoBehaviour:
   textPopup: 0
   textFront: {fileID: 0}
   textBack: {fileID: 0}
+  playerObject: {fileID: 2637196210233386614}
   isFacingCamera: 1
 --- !u!33 &6427197981201389781
 MeshFilter:
@@ -9138,7 +9195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitObject: {fileID: 0}
-  interactionRange: 4
+  interactionRange: 10
 --- !u!1 &7235825781490305520
 GameObject:
   m_ObjectHideFlags: 0
@@ -9871,7 +9928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clueText: {fileID: 1257219848}
-  clueNotes: []
+  grabobject: {fileID: 0}
   lookScript: {fileID: 7210980071903486668}
   textBackground: {fileID: 517740218}
 --- !u!1 &8297801563481515862
@@ -10195,6 +10252,7 @@ MonoBehaviour:
   textPopup: 0
   textFront: {fileID: 7768205246302836629}
   textBack: {fileID: 397214183202922288}
+  playerObject: {fileID: 2637196210233386614}
   isFacingCamera: 1
 --- !u!4 &8816972680153076733
 Transform:
