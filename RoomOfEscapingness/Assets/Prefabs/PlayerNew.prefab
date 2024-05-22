@@ -97,9 +97,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.05
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -241,7 +241,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -53.02, y: 2.031, z: 27.436}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2434, y: 0.2434, z: 0.2434}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5073048245253275257}
@@ -275,7 +275,7 @@ Transform:
   m_GameObject: {fileID: 4556957950794052289}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09000778, y: 1.3000014, z: 0.15000153}
+  m_LocalPosition: {x: 0.09000778, y: 1.507, z: 0.15000153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitObject: {fileID: 0}
-  interactionRange: 4
+  interactionRange: 6
 --- !u!114 &7734348377047032507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,10 +352,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0c586e08050581048b9d82d5e726b2da, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 5828543084854947019}
   - component: {fileID: 4661386087940058722}
   - component: {fileID: 7322841631006698790}
-  - component: {fileID: 1613293136258929503}
+  - component: {fileID: 4003215400466807198}
   m_Layer: 3
   m_Name: PlayerThingyButBetter
   m_TagString: Untagged
@@ -564,7 +564,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseLook: {fileID: 8537897084657298904}
   isGrabbed: 0
-  sensitivity: 2
+  grabbedObject: {fileID: 0}
+  grabDistance: 0.8
+  sensitivity: 4
 --- !u!54 &7322841631006698790
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -574,7 +576,7 @@ Rigidbody:
   m_GameObject: {fileID: 6562572924387511596}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 5
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -589,10 +591,10 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1613293136258929503
+  m_CollisionDetection: 1
+--- !u!114 &4003215400466807198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -601,9 +603,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6562572924387511596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aae91cb08fcc144f9f1946d72d40f09, type: 3}
+  m_Script: {fileID: 11500000, guid: 51991969733ff2e458acae0d0b2ba07d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 7
-  sprintSpeed: 10
+  walkSpeed: 2
+  sprintSpeed: 3
   orientation: {fileID: 530173175025684040}
+  walkSound: {fileID: 648125794708380115}
