@@ -9,6 +9,7 @@ TagManager:
   - GameManager
   - Key
   - Player2
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - Player
   - House
-  - 
-  - 
+  - TableHolder
+  - StopWinning
   - 
   - 
   - 

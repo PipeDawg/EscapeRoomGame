@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class WinTheGame : MonoBehaviour
@@ -15,7 +16,7 @@ public class WinTheGame : MonoBehaviour
         Color tempColor = fadeToWhiteImage.color;
         if(fadeToWhiteImage.color.a < targetAlpha)
         {
-            tempColor.a += 0.002f;
+            tempColor.a += 0.003f;
             if(tempColor.a > 1)
             {
                 tempColor.a = 1; // Safety Measure
@@ -23,7 +24,7 @@ public class WinTheGame : MonoBehaviour
         }
         else if (fadeToWhiteImage.color.a > targetAlpha)
         {
-            tempColor.a -= 0.002f;
+            tempColor.a -= 0.003f;
             if (tempColor.a < 0)
             {
                 tempColor.a = 0; // Safety Measure
@@ -38,6 +39,8 @@ public class WinTheGame : MonoBehaviour
     {
         yield return new WaitForSeconds(7);
         text.SetActive(true);
+        yield return new WaitForSeconds(7);
+        SceneManager.LoadSceneAsync(0);
     }
 
     private void OnTriggerEnter(Collider other)
