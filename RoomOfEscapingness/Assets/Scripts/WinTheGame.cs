@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,10 +9,6 @@ public class WinTheGame : MonoBehaviour
 {
     public Image fadeToWhiteImage;
     public GameObject text;
-    private void Start()
-    {
-
-    }
 
     IEnumerator FadeTheAlpha(float targetAlpha)
     {
@@ -45,7 +42,10 @@ public class WinTheGame : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        StartCoroutine(FadeTheAlpha(1));
-        StartCoroutine(ShowWinText());
+        if (other.CompareTag("Player"))
+        {
+            StartCoroutine(FadeTheAlpha(1));
+            StartCoroutine(ShowWinText());
+        }
     }
 }

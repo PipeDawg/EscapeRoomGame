@@ -12,7 +12,7 @@ public class GrabableObject : MonoBehaviour
     public Transform grabbedObject;
     private Rigidbody grabbedRigidbody;
     [SerializeField] float grabDistance = 1f; // Adjust the distance from the camera to the grabbed object
-    private LayerMask obstacleLayer; // Layer mask for obstacles (e.g., walls)
+    [SerializeField] LayerMask obstacleLayer; // Layer mask for obstacles (e.g., walls)
     private bool inspectState;
 
     private float rotationX = 0.0f;
@@ -115,11 +115,11 @@ public class GrabableObject : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 6, obstacleLayer))
+        if (Physics.Raycast(ray, out hit, lookcheck.interactionRange, obstacleLayer))
         {
             // If there's an obstacle, set the target position just before the obstacle
             Vector3 targetPosition = hit.point - Camera.main.transform.forward * 0.1f;
-            grabbedObject.position = Vector3.Lerp(grabbedObject.position, targetPosition, Time.deltaTime * 10f);
+            grabbedObject.position = Vector3.Lerp(grabbedObject.position, targetPosition, Time.deltaTime * 100f);
         }
         else
         {

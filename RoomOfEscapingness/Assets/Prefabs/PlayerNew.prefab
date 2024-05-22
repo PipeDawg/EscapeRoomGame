@@ -583,6 +583,9 @@ MonoBehaviour:
   isGrabbed: 0
   grabbedObject: {fileID: 0}
   grabDistance: 0.8
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 1
   sensitivity: 4
 --- !u!54 &7322841631006698790
 Rigidbody:
@@ -593,7 +596,7 @@ Rigidbody:
   m_GameObject: {fileID: 6562572924387511596}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 3
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -624,6 +627,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 2
-  sprintSpeed: 3
+  sprintSpeed: 2
   orientation: {fileID: 530173175025684040}
   walkSound: {fileID: 648125794708380115}
