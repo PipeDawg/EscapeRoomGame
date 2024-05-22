@@ -19,7 +19,7 @@ public class SmokeDetector : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if (timer > 0.04f && timer < 1)
+        if (timer > 0.09f && timer < 2)
         {
             beepLight.SetActive(false);
         }

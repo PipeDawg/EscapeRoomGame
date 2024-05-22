@@ -18,7 +18,7 @@ public class CursorScript : MonoBehaviour
     {
         cursorImage = GetComponent<Image>();
         interactLookCheck = GameObject.FindWithTag("Player").GetComponent<InteractLookCheck>();
-        grabberScript = GameObject.FindWithTag("Player").GetComponent<GrabableObject>();
+        grabberScript = GameObject.FindWithTag("Player2").GetComponent<GrabableObject>();
         imageTransform = GetComponent<RectTransform>();
     }
 
