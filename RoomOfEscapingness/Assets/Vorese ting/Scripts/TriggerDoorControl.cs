@@ -13,6 +13,7 @@ public class TriggerDoorControl : MonoBehaviour
     AudioSource DoorCloseSound;
     [SerializeField] bool HasLock;
     public bool Locked = true;
+    public AudioSource itsLockedVoiceLine;
 
     public GameObject Key;
 
@@ -45,6 +46,10 @@ public class TriggerDoorControl : MonoBehaviour
             if (!Locked)
             {
                 ToggleDoorAnimation();
+            }
+            else
+            {
+                itsLockedVoiceLine.Play();
             }
         }
 

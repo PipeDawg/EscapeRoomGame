@@ -22,6 +22,6 @@ public class Objectives : MonoBehaviour
 
     public void UpdateText()
     {
-        text.text = "Objectives:\n- Print out your speech [" + Convert.ToInt32(gameManager.hasSpeech) + "/1]\n- Get your suit from the closet [" + Convert.ToInt32(gameManager.hasJacket) + "/1]";
+        text.text = "To go to your sons funeral, you must:\n- Print out your speech [" + Convert.ToInt32(gameManager.hasSpeech) + "/1]\n- Get your suit from the closet [" + Convert.ToInt32(gameManager.hasJacket) + "/1]";
     }
 }

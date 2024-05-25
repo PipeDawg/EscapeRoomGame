@@ -6,6 +6,7 @@ public class ICantDoThis : MonoBehaviour
 {
     public GameObject player;
     private GameManager gameManager;
+    public AudioSource iCantDoThisSound;
     void Start()
     {
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
@@ -30,6 +31,7 @@ public class ICantDoThis : MonoBehaviour
             // Stop player from leaving
             player.GetComponent<PlayerMovementNew>().sprintSpeed = 0.7f;
             player.GetComponent<PlayerMovementNew>().walkSpeed = 0.7f;
+            iCantDoThisSound.Play();
         }
         else
         {
