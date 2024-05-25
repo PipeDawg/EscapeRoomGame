@@ -1,7 +1,9 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -20,6 +22,8 @@ public class LaptopScript : MonoBehaviour
 
     [SerializeField] Material LockedTexture;
     [SerializeField] Material LoggedInTexture;
+    public AudioSource[] wrongPasswordSounds;
+    private int randomNum;
 
     public bool _loggedIn = false;
     public bool _zoomedIn = false;
@@ -65,13 +69,18 @@ public class LaptopScript : MonoBehaviour
             LaptopOS();
         }
     }
-
+    
     public void PassWordLogin()
     {
         if (Inputfield.text == Password)
         {
             Debug.Log("Logging on...");
             LoggedIn();
+        }
+        else
+        {
+            randomNum = UnityEngine.Random.Range(0, 2);
+            wrongPasswordSounds[randomNum].Play();
         }
     }
 

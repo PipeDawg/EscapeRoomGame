@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public bool hasShaved = false;
     public bool hasMemory = false;
     public bool foundAlarmKey = false;
+    public AudioSource readyToLeave;
+    private bool playedCueAúdio = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (hasSpeech && hasJacket && !playedCueAúdio)
+        {
+            playedCueAúdio = true;
+            readyToLeave.Play();
+        }
     }
 
     public void SwitchCamera()
