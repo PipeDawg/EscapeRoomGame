@@ -15,6 +15,7 @@ public class GrabableObject : MonoBehaviour
     [SerializeField] float grabDistance = 1f; // Adjust the distance from the camera to the grabbed object
     [SerializeField] LayerMask obstacleLayer; // Layer mask for obstacles (e.g., walls)
     private bool inspectState;
+    public GameObject escapeGameMenu;
 
     private float rotationX = 0.0f;
     private float rotationY = 0.0f;
@@ -59,10 +60,15 @@ public class GrabableObject : MonoBehaviour
             }
         } else if (!inspectState) 
         {
-            if (!mouseLook.isActiveAndEnabled)
+            if (!mouseLook.isActiveAndEnabled) 
             {
                 gameObject.GetComponent<PlayerMovementNew>().enabled = true;
                 mouseLook.enabled = true;
+            }
+            if (escapeGameMenu.activeSelf) // :P
+            {
+                mouseLook.enabled = false;
+                gameObject.GetComponent<PlayerMovementNew>().enabled = false;
             }
         }
 

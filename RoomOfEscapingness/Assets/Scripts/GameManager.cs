@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public bool blessThisMessSaid = false;
     public bool boogieJarSaid = false;
     public GameObject menuScreen;
+    public MoveCam MoveCam;
 
     // Start is called before the first frame update
     void Start()
@@ -43,10 +44,12 @@ public class GameManager : MonoBehaviour
             if(menuScreen.activeSelf)
             {
                 Cursor.lockState = CursorLockMode.None;
+                MoveCam.enabled = true;
             }
             else
             {
                 Cursor.lockState = CursorLockMode.Locked;
+                MoveCam.enabled = false;
             }
         }
     }
