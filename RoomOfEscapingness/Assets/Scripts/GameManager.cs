@@ -16,9 +16,11 @@ public class GameManager : MonoBehaviour
     public AudioSource readyToLeave;
     private bool playedCueAúdio = false;
     public float timer;
+    public float timer2;
     public bool sharonVoiceSaid = false;
     public bool blessThisMessSaid = false;
     public bool boogieJarSaid = false;
+    public GameObject menuScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,18 @@ public class GameManager : MonoBehaviour
         {
             playedCueAúdio = true;
             readyToLeave.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menuScreen.SetActive(!menuScreen.activeSelf);
+            if(menuScreen.activeSelf)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
     }
 

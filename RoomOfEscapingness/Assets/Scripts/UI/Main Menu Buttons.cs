@@ -25,6 +25,11 @@ public class MainMenuButtons : MonoBehaviour
         Application.Quit();
     }
 
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
+
     IEnumerator StartTheGame()
     {
         StartCoroutine(FadeTheAlpha(1));
