@@ -20,6 +20,7 @@ public class Clue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerObject = GameObject.FindGameObjectWithTag("Player2");
         if (playerObject != null)
         {
             gr = playerObject.GetComponent<GrabableObject>();
