@@ -16,7 +16,7 @@ public class WinTheGame : MonoBehaviour
         Color tempColor = fadeToWhiteImage.color;
         if(fadeToWhiteImage.color.a < targetAlpha)
         {
-            tempColor.a += 0.003f;
+            tempColor.a += 0.004f;
             if(tempColor.a > 1)
             {
                 tempColor.a = 1; // Safety Measure
@@ -24,7 +24,7 @@ public class WinTheGame : MonoBehaviour
         }
         else if (fadeToWhiteImage.color.a > targetAlpha)
         {
-            tempColor.a -= 0.003f;
+            tempColor.a -= 0.004f;
             if (tempColor.a < 0)
             {
                 tempColor.a = 0; // Safety Measure

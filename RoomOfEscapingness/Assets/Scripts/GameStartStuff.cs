@@ -37,7 +37,7 @@ public class GameStartStuff : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         myHeadHurtsVoiceLine.Play();
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(11);
         iShouldPrepareVoiceLine.Play();
     }
 
