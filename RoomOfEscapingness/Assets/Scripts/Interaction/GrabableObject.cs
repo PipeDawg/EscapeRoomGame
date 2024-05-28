@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -83,7 +84,7 @@ public class GrabableObject : MonoBehaviour
 
     void TryGrabObject()
     {
-        if (lookcheck.hitObject.CompareTag("Grabbable"))
+        if (lookcheck.hitObject != null && lookcheck.hitObject.CompareTag("Grabbable"))
         {
             GrabObject(lookcheck.hitObject.transform);
         }
@@ -100,7 +101,11 @@ public class GrabableObject : MonoBehaviour
     void ReleaseObject()
     {
         grabbedRigidbody.isKinematic = false;
-        //grabbedRigidbody.velocity = Camera.main.transform.forward * 10f; // Adjust the throw speed as needed
+        if (grabbedObject.name.Contains("Beer"))
+        {
+            grabbedRigidbody.velocity = Camera.main.transform.forward * 5f; // Adjust the throw speed as needed
+        }
+
         grabbedObject = null;
         grabbedRigidbody = null;
         isGrabbed = false;
