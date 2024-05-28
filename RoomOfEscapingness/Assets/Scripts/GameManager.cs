@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     public bool foundAlarmKey = false;
     public AudioSource readyToLeave;
     private bool playedCueAúdio = false;
+    public float timer;
+    public bool sharonVoiceSaid = false;
+    public bool blessThisMessSaid = false;
+    public bool boogieJarSaid = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +29,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
         if (hasSpeech && hasJacket && !playedCueAúdio)
         {
             playedCueAúdio = true;
