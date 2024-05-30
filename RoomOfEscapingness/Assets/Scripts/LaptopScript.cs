@@ -37,14 +37,14 @@ public class LaptopScript : MonoBehaviour
     {
         if (InteractableScript.triggerInteractAction && !Inputfield.isFocused)
         {
-            if (_zoomedIn)
+            if (_zoomedIn) // if using then dont use
             {
                 _zoomedIn = false;
                 gameManager.SwitchCamera();
                 gameManager.LockMouse(true);
                 Debug.Log("zoomed out");
             }
-            else if (!_zoomedIn)
+            else if (!_zoomedIn) // if not using then use
             {
                 gameManager.SwitchCamera();
                 gameManager.LockMouse(false);
@@ -67,7 +67,7 @@ public class LaptopScript : MonoBehaviour
         }
     }
     
-    public void PassWordLogin()
+    public void PassWordLogin() // checks if the typed password is correct
     {
         if (Inputfield.text == Password)
         {
@@ -80,14 +80,14 @@ public class LaptopScript : MonoBehaviour
         }
     }
 
-    void LoggedIn()
+    void LoggedIn() // changes the material to the background image of Windows XP
     {
         ScreenObject.GetComponent<MeshRenderer>().material = LoggedInTexture;
         _loggedIn = true;
         gameManager.UIOn(false);
     }
 
-    void LaptopOS()
+    void LaptopOS() // Checks if the print icon has been clicked twice to print it
     {
         if (IconScript.clickedTwice)
         {

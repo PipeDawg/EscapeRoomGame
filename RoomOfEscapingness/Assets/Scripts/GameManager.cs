@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (hasSpeech && hasJacket && !playedCueAúdio)
+        if (hasSpeech && hasJacket && !playedCueAúdio) // if all objectives complete :P
         {
             playedCueAúdio = true;
             readyToLeave.Play();
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     public void SwitchCamera()
     {
-        if (MainCam.activeSelf == true)
+        if (MainCam.activeSelf)
         {
             LaptopCam.SetActive(true);
             MainCam.SetActive(false);
