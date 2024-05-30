@@ -35,25 +35,14 @@ public class LaptopScript : MonoBehaviour
 
     void Update()
     {
-        if (InteractableScript.triggerInteractAction && !Inputfield.isFocused)
+        if (InteractableScript.triggerInteractAction && !Inputfield.isFocused) // controls if player uses computer or not by input
         {
-            if (_zoomedIn) // if using then dont use
-            {
-                _zoomedIn = false;
-                gameManager.SwitchCamera();
-                gameManager.LockMouse(true);
-                Debug.Log("zoomed out");
-            }
-            else if (!_zoomedIn) // if not using then use
-            {
-                gameManager.SwitchCamera();
-                gameManager.LockMouse(false);
-                Debug.Log("zoomed in");
-                _zoomedIn = true;
-            }
+            _zoomedIn = !_zoomedIn;
+            gameManager.SwitchCamera();
+            gameManager.LockMouse(_zoomedIn);
         }
 
-        if (!_loggedIn && _zoomedIn)
+        if (!_loggedIn && _zoomedIn) // UI Inputfield for login screen
         {
             gameManager.UIOn(true);
         } else if (!_loggedIn && !_zoomedIn)
