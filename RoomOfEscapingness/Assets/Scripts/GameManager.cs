@@ -10,17 +10,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlayerMovementNew PlayerMovement;
     public bool hasSpeech = false;
     public bool hasJacket = false;
-    public bool hasShaved = false;
-    public bool hasMemory = false;
     public bool foundAlarmKey = false;
     public AudioSource readyToLeave;
     private bool playedCueAúdio = false;
     public float timer;
-    public float timer2;
-    public bool sharonVoiceSaid = false;
-    public bool blessThisMessSaid = false;
-    public bool boogieJarSaid = false;
-    public GameObject menuScreen;
+    public bool sharonVoiceSaid = false; // Above
+    public bool blessThisMessSaid = false; // Above, below, and this is for voice lines that should only play once
+    public bool boogieJarSaid = false; // Below
+    [SerializeField] GameObject menuScreen;
     public MoveCam MoveCam;
 
     // Start is called before the first frame update
