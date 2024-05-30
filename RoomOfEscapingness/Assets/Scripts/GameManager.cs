@@ -43,12 +43,12 @@ public class GameManager : MonoBehaviour
             menuScreen.SetActive(!menuScreen.activeSelf);
             if(menuScreen.activeSelf)
             {
-                Cursor.lockState = CursorLockMode.None;
+                LockMouse(true);
                 MoveCam.enabled = true;
             }
             else
             {
-                Cursor.lockState = CursorLockMode.Locked;
+                LockMouse(false);
                 MoveCam.enabled = false;
             }
         }
