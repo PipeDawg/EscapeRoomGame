@@ -22,20 +22,17 @@ public class LaptopScript : MonoBehaviour
 
     [SerializeField] Material LockedTexture;
     [SerializeField] Material LoggedInTexture;
-    public AudioSource[] wrongPasswordSounds;
-    private int randomNum;
+    [SerializeField] AudioSource[] wrongPasswordSounds;
 
     public bool _loggedIn = false;
     public bool _zoomedIn = false;
 
     [SerializeField] string Password;
-    // Start is called before the first frame update
     void Start()
     {
         gameManager.UIOn(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (InteractableScript.triggerInteractAction && !Inputfield.isFocused)
@@ -79,8 +76,7 @@ public class LaptopScript : MonoBehaviour
         }
         else
         {
-            randomNum = UnityEngine.Random.Range(0, 2);
-            wrongPasswordSounds[randomNum].Play();
+            wrongPasswordSounds[UnityEngine.Random.Range(0, 2)].Play();
         }
     }
 
